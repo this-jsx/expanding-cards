@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;600&family=Open+Sans:wght@300;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.root {
+  display: flex;
+  width: 80vw;  
+  align-self: center;
+  overflow: hidden;
+}
+
+.item {
+  height: 80vh;
+  font-weight: 600;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  cursor: pointer;
+  flex: .5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.item h3 {
+  color: #fff;
+}
+
+.item:nth-child(5) .item__title {
+  color: darkmagenta;
+}
+
+.item__title {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  opacity: 0;
+}
+
+.active {
+  flex: 5;
+  border-radius: 0
+}
+
+.active .item__title {
+  opacity: 1;
+  transition: opacity .3s ease-in .5s;
+}
